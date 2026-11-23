@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "SiteLens AI — Speed, Security & Responsive Suite",
-  "version": "2.0.1",
+  "name": "DevWebAudit — Speed, Security & Responsive Suite",
+  "version": "2.0.2",
   "description": "Audit Lighthouse speed (Desktop+Mobile), 6-layer website security, and live multi-device responsive layouts in one click.",
   "permissions": [
     "activeTab",
@@ -24,7 +24,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "SiteLens AI - Speed & Security Auditor",
+    "default_title": "DevWebAudit - Speed & Security Auditor",
     "default_icon": {
       "16": "icon16.png",
       "32": "icon32.png",

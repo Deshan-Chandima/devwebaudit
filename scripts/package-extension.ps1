@@ -18,7 +18,7 @@ if (-not (Test-Path $ManifestPath)) {
 
 $Manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
 $Version = $Manifest.version
-$ZipName = "sitelens-ai-v$Version-chrome-extension.zip"
+$ZipName = "devwebaudit-v$Version-chrome-extension.zip"
 $ZipPath = Join-Path $DistDir $ZipName
 $StageDir = Join-Path $DistDir "_stage_v$Version"
 
@@ -40,7 +40,7 @@ Remove-Item $StageDir -Recurse -Force
 
 $SizeKB = [Math]::Round((Get-Item $ZipPath).Length / 1KB, 1)
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host " SiteLens AI v$Version Extension Packaged Successfully!" -ForegroundColor Green
+Write-Host " DevWebAudit v$Version Extension Packaged Successfully!" -ForegroundColor Green
 Write-Host " Archive: $ZipPath ($SizeKB KB)" -ForegroundColor White
 Write-Host " Ready for Chrome Web Store, Edge Add-ons & GitHub Releases." -ForegroundColor Gray
 Write-Host "============================================================" -ForegroundColor Cyan

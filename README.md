@@ -1,8 +1,8 @@
-# SiteLens AI — Web Performance, 6-Layer Security & Responsive Suite
+# DevWebAudit — Web Performance, 6-Layer Security & Responsive Suite
 
 A production-grade **Chrome Extension (Manifest V3)** and dual-engine architecture designed for web developers, QA engineers, and site owners. 
 
-SiteLens AI provides **1-click Google Lighthouse audits (Desktop + Mobile)**, a **6-Layer Defensive Security Scanner with site-wide crawling and expandable Threat & Risk analysis**, and a **Live Multi-Device Responsive Matrix Studio**, generating token-optimized **AI-ready diagnostic reports (`.ai.md`, `.ai.json`, `.security.md`, `.security.json`)**.
+DevWebAudit provides **1-click Google Lighthouse audits (Desktop + Mobile)**, a **6-Layer Defensive Security Scanner with site-wide crawling and expandable Threat & Risk analysis**, and a **Live Multi-Device Responsive Matrix Studio**, generating token-optimized **AI-ready diagnostic reports (`.ai.md`, `.ai.json`, `.security.md`, `.security.json`)**.
 
 ---
 
@@ -26,7 +26,7 @@ SiteLens AI provides **1-click Google Lighthouse audits (Desktop + Mobile)**, a 
 - **Core Web Vitals**: Measures FCP (First Contentful Paint), LCP (Largest Contentful Paint), TBT (Total Blocking Time), CLS (Cumulative Layout Shift), Speed Index, and TTI (Time to Interactive).
 - **Interactive Speedometer**: Semicircular score arc gauge with smooth pointer animations and color-coded status badges.
 - **Smart Engine Routing**:
-  - **Live Sites**: Automatically routes through the SiteLens Cloud Proxy on Vercel to bypass local ISP query limits.
+  - **Live Sites**: Automatically routes through the DevWebAudit Cloud Proxy on Vercel to bypass local ISP query limits.
   - **Localhost (`localhost:3000`, `localhost:5173`)**: Automatically audits directly inside your open Chrome tab using the In-Browser Native Engine with zero external dependencies.
 
 ### 🛡️ 2. 6-Layer Defensive Website Security Scanner
@@ -61,25 +61,25 @@ SiteLens AI provides **1-click Google Lighthouse audits (Desktop + Mobile)**, a 
 
 ---
 
-## 📦 How to Install SiteLens AI
+## 📦 How to Install DevWebAudit
 
 ### Method 1: Install from Release ZIP (Recommended for End Users & Teammates)
 
-1. Download the latest **`sitelens-ai-v2.0.1-chrome-extension.zip`** from the [Releases](https://github.com/Deshan-Chandima/sitelens-ai/releases) section or the `dist/` folder.
+1. Download the latest **`devwebaudit-v2.0.2-chrome-extension.zip`** from the [Releases](https://github.com/Deshan-Chandima/sitelens-ai/releases) section or the `dist/` folder.
 2. Right-click the `.zip` file and select **Extract All** (Unzip).
 3. Open Google Chrome and enter `chrome://extensions` in the address bar.
 4. Turn **ON** the **Developer mode** toggle in the top-right corner.
 5. Click the **Load unpacked** button in the top-left corner.
 6. Select the unzipped folder containing `manifest.json`.
-7. Click the **🧩 Extensions** icon in your Chrome toolbar and **Pin** SiteLens AI for instant access.
+7. Click the **🧩 Extensions** icon in your Chrome toolbar and **Pin** DevWebAudit for instant access.
 
-> **Zero Configuration:** SiteLens AI connects automatically to the free SiteLens Cloud Engine (`https://sitelens-ai.vercel.app`). No servers, command lines, or API keys are required to audit public sites or localhost!
+> **Zero Configuration:** DevWebAudit connects automatically to the free DevWebAudit Cloud Engine (`https://sitelens-ai.vercel.app`). No servers, command lines, or API keys are required to audit public sites or localhost!
 
 ---
 
 ### Method 2: Developer Setup (From Source Code)
 
-If you are developing or contributing to SiteLens AI:
+If you are developing or contributing to DevWebAudit:
 
 ```bash
 # 1. Clone the repository
@@ -104,9 +104,9 @@ cd ..
 
 ### 1. Running Performance & Core Web Vitals Audits
 1. Navigate to any website or web application in Chrome.
-2. Click the **SiteLens AI** extension icon in your toolbar.
+2. Click the **DevWebAudit** extension icon in your toolbar.
    - The current tab's URL is automatically detected and filled.
-   - For live websites (e.g. `https://github.com`), the engine operates in **SiteLens Cloud** mode.
+   - For live websites (e.g. `https://github.com`), the engine operates in **DevWebAudit Cloud** mode.
    - For localhost websites (e.g. `http://localhost:5173`), the extension activates **Localhost In-Browser Mode** automatically.
 3. Select your desired device mode:
    - **Dual Run**: Audits both Desktop and Mobile sequentially (recommended).
@@ -118,7 +118,7 @@ cd ..
 ---
 
 ### 2. Running 6-Layer Security Scans & Viewing Threat Risks
-1. Open the SiteLens AI popup and click the **Security** tab.
+1. Open the DevWebAudit popup and click the **Security** tab.
 2. Choose your crawl scope:
    - **Full Site Crawl**: Discovers internal links and scans across multiple pages. Choose between **5**, **10 (default)**, or **25** pages.
    - **Quick Page Scan**: Fast single-page audit of headers, cookies, TLS, and DOM scripts.
@@ -133,7 +133,7 @@ cd ..
 ---
 
 ### 3. Using the Live Responsive Matrix Studio
-1. Open the SiteLens AI popup and click the **Responsive** tab.
+1. Open the DevWebAudit popup and click the **Responsive** tab.
 2. Click **Launch Live Responsive Studio**.
 3. A full-screen testing matrix opens in a new tab rendering your active site across 7 viewports simultaneously:
    - **Live Navigation & Scrolling**: Click links or interact with forms—actions reflect across the viewports.
@@ -148,13 +148,13 @@ For local developers who require **100% Chrome DevTools Incognito 1:1 simulation
 
 1. Double-click **`start-server.bat`** in the project root (or run `npm start` in the `server/` directory).
 2. The local runner launches at `http://localhost:9876`.
-3. In the SiteLens AI popup, click the top status pill (`SiteLens Cloud: Online`), enter `http://localhost:9876`, and click **Connect**.
+3. In the DevWebAudit popup, click the top status pill (`DevWebAudit Cloud: Online`), enter `http://localhost:9876`, and click **Connect**.
 4. The status turns to **`Local Engine: Online`**, using your computer's local headless Chrome for audits.
 
 ---
 
 ### 5. Adding a Free Google PageSpeed Insights API Key (Optional)
-SiteLens AI connects through our Vercel cloud proxy, which handles public queries without requiring a personal API key. However, if you perform high-volume daily audits, you can attach a personal Google Cloud API key:
+DevWebAudit connects through our Vercel cloud proxy, which handles public queries without requiring a personal API key. However, if you perform high-volume daily audits, you can attach a personal Google Cloud API key:
 
 1. Click the top status pill in the extension popup.
 2. Click **Get Free Key** (or visit the [Google PageSpeed Insights Get Key](https://developers.google.com/speed/docs/insights/v5/get-started) page).
@@ -168,7 +168,7 @@ SiteLens AI connects through our Vercel cloud proxy, which handles public querie
 ```text
 Performane/
 ├── dist/                         # Packaged release zip archives
-│   └── sitelens-ai-v2.0.1-chrome-extension.zip
+│   └── devwebaudit-v2.0.2-chrome-extension.zip
 ├── extension/                    # Chrome Extension (Manifest V3)
 │   ├── manifest.json             # Extension manifest & permissions
 │   ├── background.js             # MV3 Service worker (downloads, badges, DNR rules)
@@ -201,7 +201,7 @@ Performane/
 
 ## 🔒 Security & Privacy Policy
 
-- **Zero Data Collection**: SiteLens AI does not track your browsing history, inject advertisements, collect analytics, or sell user data.
+- **Zero Data Collection**: DevWebAudit does not track your browsing history, inject advertisements, collect analytics, or sell user data.
 - **Transparent Execution**: Audits are performed either in your own browser, via public Google APIs, or on your own local server.
 - **SSRF Protected**: The cloud backend prohibits requests to loopback, private RFC 1918 subnets, and cloud metadata addresses (`169.254.169.254`).
 - Full details are available in [PRIVACY.md](file:///d:/Coding/Extention/Performane/PRIVACY.md).

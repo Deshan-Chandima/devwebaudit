@@ -314,7 +314,7 @@ export function buildCombinedAiMarkdown(combinedReport) {
   const desktop = devices?.desktop || null;
   const mobile = devices?.mobile || null;
 
-  lines.push(`# SiteLens AI Dual Audit Report (Speed & Diagnostics)`);
+  lines.push(`# DevWebAudit Dual Audit Report (Speed & Diagnostics)`);
   lines.push(`- **Target URL:** ${url}`);
   lines.push(`- **Audited At:** ${generatedAt}`);
   lines.push(

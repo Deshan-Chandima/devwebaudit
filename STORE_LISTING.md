@@ -1,6 +1,6 @@
-# Public Release & Store Submission Guide — SiteLens AI v2.0.1
+# Public Release & Store Submission Guide — DevWebAudit v2.0.2
 
-Everything you need to host the optional Security API for **\$0/month** and publish **SiteLens AI** to the **Chrome Web Store**, **Microsoft Edge Add-ons (\$0)**, and **GitHub Releases (\$0)**.
+Everything you need to host the optional Security API for **\$0/month** and publish **DevWebAudit** to the **Chrome Web Store**, **Microsoft Edge Add-ons (\$0)**, and **GitHub Releases (\$0)**.
 
 ---
 
@@ -14,7 +14,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\package-extension.ps1
 
 This creates a clean, store-ready package at:
 ```text
-dist/sitelens-ai-v2.0.1-chrome-extension.zip
+dist/devwebaudit-v2.0.2-chrome-extension.zip
 ```
 *(Automatically excludes Chrome's `_metadata/` folder and OS junk files.)*
 
@@ -38,7 +38,7 @@ dist/sitelens-ai-v2.0.1-chrome-extension.zip
 ## 3. Chrome Web Store & Microsoft Edge Add-ons Listing Copy
 
 ### Store Title
-`SiteLens AI — Speed, Security & Responsive Suite`
+`DevWebAudit — Speed, Security & Responsive Suite`
 
 ### Short Summary (132 chars max)
 `Audit Lighthouse speed (Desktop+Mobile), 6-layer website security, and live multi-device responsive layouts in one click.`
@@ -51,7 +51,7 @@ Link directly to your GitHub file (or GitHub Pages):
 `https://github.com/Deshan-Chandima/sitelens-ai/blob/main/PRIVACY.md`
 
 ### Single Purpose Description (Required by Chrome Web Store)
-> SiteLens AI is a unified web developer auditing tool that inspects a user-selected website's Lighthouse performance/SEO scores, defensive HTTP/DOM security posture, and multi-device responsive layouts, generating AI-ready diagnostic reports.
+> DevWebAudit is a unified web developer auditing tool that inspects a user-selected website's Lighthouse performance/SEO scores, defensive HTTP/DOM security posture, and multi-device responsive layouts, generating AI-ready diagnostic reports.
 
 ### Permission Justifications (Copy & Paste into Chrome Web Store Dashboard)
 

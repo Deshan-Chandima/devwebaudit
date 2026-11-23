@@ -1,5 +1,5 @@
 /**
- * 6-Layer Defensive Web Security Scanner for SiteLens AI
+ * 6-Layer Defensive Web Security Scanner for DevWebAudit
  * Performs non-intrusive security posture checks across a single URL or site-wide crawl:
  *  1. HTTP Security Headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, COOP)
  *  2. Cookie & Session Security (HttpOnly, Secure, SameSite, __Secure-/__Host- prefixes)
@@ -194,7 +194,7 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 7000) {
       redirect: options.redirect || 'follow',
       signal: controller.signal,
       headers: {
-        'User-Agent': 'SiteLens-AI-SecurityAuditor/1.2 (+https://github.com/Deshan-Chandima/sitelens-ai)',
+        'User-Agent': 'DevWebAudit-SecurityAuditor/2.0 (+https://github.com/Deshan-Chandima/sitelens-ai)',
         ...(options.headers || {})
       }
     });

@@ -1,7 +1,7 @@
 {
-  "name": "sitelens-ai-server",
-  "version": "2.0.1",
-  "description": "Local Node.js Engine for SiteLens AI — Web Performance (DevTools 1:1), SEO, Security & Responsive Suite",
+  "name": "devwebaudit-server",
+  "version": "2.0.2",
+  "description": "Local Node.js Engine for DevWebAudit — Web Performance (DevTools 1:1), SEO, Security & Responsive Suite",
   "type": "module",
   "main": "server.js",
   "scripts": {

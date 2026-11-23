@@ -57,7 +57,7 @@ app.use(
       ) {
         return callback(null, true);
       }
-      return callback(new Error('Origin not allowed by SiteLens AI CORS policy.'));
+      return callback(new Error('Origin not allowed by DevWebAudit CORS policy.'));
     }
   })
 );
@@ -271,8 +271,8 @@ app.get('/api/health', (req, res) => {
   res.json({
     ok: true,
     status: 'online',
-    service: 'SiteLens AI Engine',
-    version: '2.0.1',
+    service: 'DevWebAudit Engine',
+    version: '2.0.2',
     mode: PUBLIC_CLOUD_MODE ? 'cloud' : 'local',
     capabilities: {
       lighthouse: !DISABLE_LOCAL_LIGHTHOUSE,
@@ -328,7 +328,7 @@ app.get('/api/psi', rateLimitMiddleware, async (req, res) => {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
-        'User-Agent': 'SiteLens-AI-Cloud-Auditor/2.0'
+        'User-Agent': 'DevWebAudit-Cloud-Auditor/2.0'
       },
       signal: controller.signal
     });
@@ -461,7 +461,7 @@ app.post('/api/audit', rateLimitMiddleware, async (req, res) => {
         statusText: `Running ${deviceTitle} Audit...`
       });
 
-      console.log(`[SiteLens AI] Step ${stepNumber}/${totalSteps}: Running ${deviceTitle} Audit for ${targetUrl}...`);
+      console.log(`[DevWebAudit] Step ${stepNumber}/${totalSteps}: Running ${deviceTitle} Audit for ${targetUrl}...`);
 
       let chrome = null;
       try {
@@ -520,7 +520,7 @@ app.post('/api/audit', rateLimitMiddleware, async (req, res) => {
           try {
             await chrome.kill();
           } catch (killErr) {
-            console.warn('[SiteLens AI] Warning killing Chrome process:', killErr?.message);
+            console.warn('[DevWebAudit] Warning killing Chrome process:', killErr?.message);
           }
         }
       }
@@ -541,7 +541,7 @@ app.post('/api/audit', rateLimitMiddleware, async (req, res) => {
       statusText: 'Completed'
     });
 
-    console.log(`[SiteLens AI] Completed audit for ${targetUrl}`);
+    console.log(`[DevWebAudit] Completed audit for ${targetUrl}`);
 
     const finalPayload = {
       ok: true,
@@ -639,7 +639,7 @@ app.post('/api/security-audit', rateLimitMiddleware, async (req, res) => {
   };
 
   try {
-    console.log(`[SiteLens AI Security] Starting ${scanScope} security audit for ${targetUrl}...`);
+    console.log(`[DevWebAudit Security] Starting ${scanScope} security audit for ${targetUrl}...`);
     const resultPayload = await runSecurityAudit({
       url: targetUrl,
       scanScope,
@@ -653,7 +653,7 @@ app.post('/api/security-audit', rateLimitMiddleware, async (req, res) => {
       statusText: 'Security Audit Completed'
     });
 
-    console.log(`[SiteLens AI Security] Completed security audit for ${targetUrl} (Score: ${resultPayload.securityReport.json.overallScore}/100, Grade: ${resultPayload.securityReport.json.grade})`);
+    console.log(`[DevWebAudit Security] Completed security audit for ${targetUrl} (Score: ${resultPayload.securityReport.json.overallScore}/100, Grade: ${resultPayload.securityReport.json.grade})`);
 
     if (wantStream) {
       res.write(JSON.stringify(resultPayload) + '\n');
@@ -662,7 +662,7 @@ app.post('/api/security-audit', rateLimitMiddleware, async (req, res) => {
       res.json(resultPayload);
     }
   } catch (error) {
-    console.error('[SiteLens AI Security] Security audit failed:', error);
+    console.error('[DevWebAudit Security] Security audit failed:', error);
     updateState({
       running: false,
       statusText: `Error: ${error.message || 'Security scan failed'}`
@@ -688,8 +688,8 @@ app.post('/api/security-audit', rateLimitMiddleware, async (req, res) => {
 app.get('/', (req, res) => {
   res.json({
     ok: true,
-    service: 'SiteLens AI Cloud Security & Speed Engine',
-    version: '2.0.1',
+    service: 'DevWebAudit Cloud Security & Speed Engine',
+    version: '2.0.2',
     mode: PUBLIC_CLOUD_MODE ? 'cloud' : 'local',
     endpoints: {
       health: '/api/health',
@@ -703,7 +703,7 @@ app.get('/', (req, res) => {
 if (!IS_VERCEL) {
   app.listen(PORT, HOST, () => {
     console.log('==============================================================');
-    console.log(` SiteLens AI Engine v2.0.1 is ONLINE (${PUBLIC_CLOUD_MODE ? 'PUBLIC CLOUD MODE' : 'LOCAL MODE'})`);
+    console.log(` DevWebAudit Engine v2.0.2 is ONLINE (${PUBLIC_CLOUD_MODE ? 'PUBLIC CLOUD MODE' : 'LOCAL MODE'})`);
     console.log(` Listening at: http://${HOST}:${PORT}`);
     console.log(` Health Check: /api/health`);
     console.log(` Audit API:    POST /api/audit (${DISABLE_LOCAL_LIGHTHOUSE ? 'disabled - PSI mode' : 'enabled'})`);

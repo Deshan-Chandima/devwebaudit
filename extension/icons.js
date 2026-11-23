@@ -1,5 +1,5 @@
 /**
- * SiteLens AI — High-Craft Lucide Vector Icon Registry
+ * DevWebAudit — High-Craft Lucide Vector Icon Registry
  * Consistent 24x24 viewBox, strokeWidth 1.75, currentColor inheritance.
  */
 

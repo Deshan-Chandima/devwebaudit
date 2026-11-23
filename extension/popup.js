@@ -417,7 +417,7 @@ async function checkLocalServerHealth() {
       };
       els.serverStatusDot.className = 'status-dot online';
       els.serverStatusText.textContent = isCloudHost
-        ? 'SiteLens Cloud: Online'
+        ? 'DevWebAudit Cloud: Online'
         : 'Local Engine: Online';
       els.fallbackBanner.classList.add('hidden');
       updateRunButtonLabel();
@@ -1363,7 +1363,7 @@ async function runViaPageSpeedFallback({ url, devices, categories, formats }) {
       stepNum,
       devices.length,
       `Step ${stepNum}/${devices.length}: Auditing ${deviceTitle} (Cloud Engine)...`,
-      canUseCloudProxy ? 'Auditing via SiteLens Cloud Engine...' : `Querying Google PageSpeed Insights (${device})...`
+      canUseCloudProxy ? 'Auditing via DevWebAudit Cloud Engine...' : `Querying Google PageSpeed Insights (${device})...`
     );
 
     const params = new URLSearchParams({
@@ -1380,7 +1380,7 @@ async function runViaPageSpeedFallback({ url, devices, categories, formats }) {
     let lhr = null;
     let proxyError = null;
 
-    // 1. Try SiteLens Cloud Engine proxy first (runs in Vercel data center, avoiding local ISP IP quota)
+    // 1. Try DevWebAudit Cloud Engine proxy first (runs in Vercel data center, avoiding local ISP IP quota)
     if (canUseCloudProxy) {
       try {
         const proxyRes = await fetch(`${serverUrl}/api/psi?${params.toString()}`);
