@@ -65,7 +65,7 @@ DevWebAudit provides **1-click Google Lighthouse audits (Desktop + Mobile)**, a 
 
 ### Method 1: Install from Release ZIP (Recommended for End Users & Teammates)
 
-1. Download the latest **`devwebaudit-v2.0.2-chrome-extension.zip`** from the [Releases](https://github.com/Deshan-Chandima/sitelens-ai/releases) section or the `dist/` folder.
+1. Download the latest **`devwebaudit-v2.0.2-chrome-extension.zip`** from the [Releases](https://github.com/Deshan-Chandima/devwebaudit/releases) section or the `dist/` folder.
 2. Right-click the `.zip` file and select **Extract All** (Unzip).
 3. Open Google Chrome and enter `chrome://extensions` in the address bar.
 4. Turn **ON** the **Developer mode** toggle in the top-right corner.
@@ -83,8 +83,8 @@ If you are developing or contributing to DevWebAudit:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Deshan-Chandima/sitelens-ai.git
-cd sitelens-ai
+git clone https://github.com/Deshan-Chandima/devwebaudit.git
+cd devwebaudit
 
 # 2. Switch to development branch
 git checkout dev

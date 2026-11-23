@@ -194,7 +194,7 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 7000) {
       redirect: options.redirect || 'follow',
       signal: controller.signal,
       headers: {
-        'User-Agent': 'DevWebAudit-SecurityAuditor/2.0 (+https://github.com/Deshan-Chandima/sitelens-ai)',
+        'User-Agent': 'DevWebAudit-SecurityAuditor/2.0 (+https://github.com/Deshan-Chandima/devwebaudit)',
         ...(options.headers || {})
       }
     });

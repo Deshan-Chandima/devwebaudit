@@ -1,10 +1,10 @@
-# Render.com Blueprint — 1-Click Free Cloud Deployment for SiteLens AI Security API
+# Render.com Blueprint — 1-Click Free Cloud Deployment for DevWebAudit Security API
 # Deploy at: https://dashboard.render.com/blueprints
 # Runs on Render Free Tier ($0/month) with SSRF protection & rate limiting enabled.
 
 services:
   - type: web
-    name: sitelens-ai-api
+    name: devwebaudit-api
     runtime: node
     plan: free
     rootDir: server

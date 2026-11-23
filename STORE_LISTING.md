@@ -48,7 +48,7 @@ dist/devwebaudit-v2.0.2-chrome-extension.zip
 
 ### Privacy Policy URL
 Link directly to your GitHub file (or GitHub Pages):
-`https://github.com/Deshan-Chandima/sitelens-ai/blob/main/PRIVACY.md`
+`https://github.com/Deshan-Chandima/devwebaudit/blob/main/PRIVACY.md`
 
 ### Single Purpose Description (Required by Chrome Web Store)
 > DevWebAudit is a unified web developer auditing tool that inspects a user-selected website's Lighthouse performance/SEO scores, defensive HTTP/DOM security posture, and multi-device responsive layouts, generating AI-ready diagnostic reports.

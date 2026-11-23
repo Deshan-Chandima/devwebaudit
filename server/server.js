@@ -696,7 +696,7 @@ app.get('/', (req, res) => {
       psi: 'GET /api/psi',
       securityAudit: 'POST /api/security-audit'
     },
-    repository: 'https://github.com/Deshan-Chandima/sitelens-ai'
+    repository: 'https://github.com/Deshan-Chandima/devwebaudit'
   });
 });
 
